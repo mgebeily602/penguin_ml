@@ -3,8 +3,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt 
 import pandas as pd 
 import pickle 
+
+from sklearn.metrics import accuracy_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
  
-st.title('Penguin Classifier: A Machine Learning App') 
+st.title('Penguin Classifier')
 
 st.write("This app uses 6 inputs to predict the species of penguin using " 
 
@@ -12,7 +16,10 @@ st.write("This app uses 6 inputs to predict the species of penguin using "
 
          " to get started!") 
 
-  
+ password_guess = st.text_input('Enter Password:')
+if password_guess != 'streamlit_password':
+    st.stop()
+penguin_file = st.file_uploader('Upload your own penguin data') 
 
   
 
