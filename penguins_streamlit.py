@@ -16,7 +16,7 @@ st.write("This app uses 6 inputs to predict the species of penguin using "
 
          " to get started!") 
 
- password_guess = st.text_input('Enter Password:')
+password_guess = st.text_input('Enter Password:')
 if password_guess != 'streamlit_password':
     st.stop()
 penguin_file = st.file_uploader('Upload your own penguin data') 
